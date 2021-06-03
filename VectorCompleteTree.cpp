@@ -45,14 +45,14 @@ public:
         *p=*q;
         *q=e;
     }
-    void Preorder(Position root){
+    void Inorder(Position root){
         if(!size())
             return;
         if(hasLeft(root))
-            Preorder(left(root));
+            Inorder(left(root));
         cout<<V[idx(root)]<<" ";
         if(hasRight(root))
-            Preorder(right(root));
+            Inorder(right(root));
         return;
     }
 
